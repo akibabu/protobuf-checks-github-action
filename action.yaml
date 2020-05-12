@@ -1,0 +1,13 @@
+name: "Protobuf Registry Github Action"
+description: "Protobuf backwards compatibility checks"
+inputs:
+  checkouts_dir:
+    description: "Dir containing a master/ and a branch/ dir being protobuf registry roots"
+    required: true
+  make_pr_comment:
+    description: "Make a comment in the pull request if there are errors, uses GITHUB_ACCESS_TOKEN"
+    required: false
+    default: "true"
+runs:
+  using: "docker"
+  image: "Dockerfile"

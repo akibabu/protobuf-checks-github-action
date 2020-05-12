@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package pkg.v1;
+
+message Omiyage {
+    string name = 1;
+    uint32 price = 2;
+}
